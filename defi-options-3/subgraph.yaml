@@ -1,0 +1,23 @@
+specVersion: 0.0.4
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum
+    name: chainlinkOptions
+    network: rinkeby
+    source:
+      address: "0xCA5D82d9ee9eACdFD884811d5C0256bC83dfDAb7"
+      abi: chainlinkOptions
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.5
+      language: wasm/assemblyscript
+      entities:
+        - Option
+      abis:
+        - name: chainlinkOptions
+          file: ./abis/chainlinkOptions.json
+      eventHandlers:
+        - event: OptionWritten(string,uint256,uint256,uint256,uint256)
+          handler: handleOptionWritten
+      file: ./src/chainlink-options.ts
