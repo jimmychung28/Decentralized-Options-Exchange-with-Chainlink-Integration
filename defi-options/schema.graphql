@@ -1,6 +1,14 @@
-type ExampleEntity @entity {
+type Options @entity {
   id: ID!
-  count: BigInt!
-  token: String! # string
-  strike: BigInt! # uint256
+  strike: BigInt!
+  premium: BigInt!
+  expiry: BigInt!
+  amount: BigInt!
+  exercised: Boolean!
+  canceled: Boolean!
+  id: BigInt!
+  latestCost: BigInt!
+  writer: String!
+  buyer: String!
 }
+
