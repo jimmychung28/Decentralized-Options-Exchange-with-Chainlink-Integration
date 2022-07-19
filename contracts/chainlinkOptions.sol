@@ -103,6 +103,22 @@ contract chainlinkOptions {
         }
         emit OptionWritten(token, strike, premium, expiry, tknAmt);
     }
+
+     function writeOptionTest(string memory token, uint strike, uint premium, uint expiry, uint tknAmt) public payable {
+        // bytes32 tokenHash = keccak256(abi.encodePacked(token));
+        // require(tokenHash == ethHash || tokenHash == linkHash, "Only ETH and LINK tokens are supported");
+        // updatePrices();
+        // if (tokenHash == ethHash) {
+        //     require(msg.value == tknAmt, "Incorrect amount of ETH supplied"); 
+        //     uint latestCost = strike.mul(tknAmt).div(ethPrice.mul(10**10)); //current cost to exercise in ETH, decimal places corrected
+        //     ethOpts.push(option(strike, premium, expiry, tknAmt, false, false, ethOpts.length, latestCost, msg.sender, address(0)));
+        // } else {
+        //     require(LINK.transferFrom(msg.sender, contractAddr, tknAmt), "Incorrect amount of LINK supplied");
+        //     uint latestCost = strike.mul(tknAmt).div(linkPrice.mul(10**10));
+        //     linkOpts.push(option(strike, premium, expiry, tknAmt, false, false, linkOpts.length, latestCost, msg.sender, address(0)));
+        // }
+        emit OptionWritten(token, strike, premium, expiry, tknAmt);
+    }
     
     //Allows option writer to cancel and get their funds back from an unpurchased option
     function cancelOption(string memory token, uint ID) public payable {

@@ -1,0 +1,7 @@
+{
+  "rinkeby": {
+    "chainlinkOptions": {
+      "address": "0xEc9750b72496258Cadb12EC3AD13Dc24A2B69931"
+    }
+  }
+}

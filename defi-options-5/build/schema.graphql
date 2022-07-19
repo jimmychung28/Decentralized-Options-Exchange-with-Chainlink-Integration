@@ -1,0 +1,13 @@
+type Options @entity {
+  id: ID!
+  strike: BigInt!
+  premium: BigInt!
+  expiry: BigInt!
+  amount: BigInt!
+  exercised: Boolean!
+  canceled: Boolean!
+  latestCost: BigInt!
+  writer: String!
+  buyer: String!
+}
+
