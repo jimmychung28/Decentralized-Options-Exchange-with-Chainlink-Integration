@@ -6,7 +6,7 @@ type Options @entity {
   amount: BigInt!
   exercised: Boolean!
   canceled: Boolean!
-  id: BigInt!
+  optionId: BigInt!
   latestCost: BigInt!
   writer: String!
   buyer: String!
