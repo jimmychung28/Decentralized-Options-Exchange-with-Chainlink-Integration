@@ -144,10 +144,6 @@ Key dependencies include:
 }
 ```
 
-## License
-
-UNLICENSED
-
 ## Contributing
 
 1. Fork the repository
